@@ -41,11 +41,17 @@ justify-content: center;
 gap: 30px;
 }
 
+.globalMenu li a:hover,
+.globalMenu li a:hover svg {
+  fill: red;
+  color: red;
+}
+
 .globalMenu a {
 color: #000000;
 display: block;
 text-decoration: none;
-padding: 10px 25px;
+padding: 0 27px;
 }
 
 .globalMenu > li {
@@ -54,7 +60,7 @@ position: relative;
 }
 
 .globalMenu > li:hover .second-ul {
-display: block;
+  transform: translateY(0);
 }
 
 .second-ul  {
@@ -62,8 +68,9 @@ padding: 20px 0 0;
 position: absolute;
 top: 100%;
 left: 0;
+transform: translateY(-300%);
 background: rgb(113, 83, 182, 0.5);
-display: none;
+transition: transform .4s linear;
 z-index: 1;
 }
 
@@ -76,20 +83,13 @@ background: rgb(113, 83, 182, 0.5);
 color: #fdf4f4;
 }
 
-.globalMenu li:nth-child(odd) a {
-color: #ffffff;
-}
+
 
 .globalMenu li a {
 color: #fff;
 text-decoration: none;
 text-transform: uppercase;
 }
-
-.globalMenu li a.active {
-color: rgb(159, 90, 177, 0.5);
-}
-
 
 .ameliaSite {
   font-family: 'Roboto';
@@ -99,28 +99,22 @@ color: rgb(159, 90, 177, 0.5);
   right:100%;
 }
 
-.second-ul  li:hover > ul {
-display: block;
-}
-
 .second-ul ul{
-  display: none;
+  transition: all .5s linear;
+  transform: scale(0);
 }
 
-.active:hover {
-  fill: red;
-}
+.second-ul  li:hover > ul {
+  transform: scale(1);
+  }
 
 .svgHeader {
   width: 24px;
   height: 24px;
   fill: #fff;
   position: absolute;
-  margin-top: 8px;
-}
-
-.svgHeader:hover {
-  fill: red;
+  top: 9;
+  left: 0;
 }
 
 .svgHeaderRight {
@@ -128,40 +122,11 @@ display: block;
   height: 24px;
   fill: #fff;
   position: absolute;
-  margin-top: 8px;
   top: 1px;
   right: 0px;
   transition-property: fill;
   transition-duration: 1s;
   transition-timing-function: ease-in;
-}
-
-.svgHeaderRight:hover { 
-  fill: red;
-}
-
-.footerIcon {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-  margin: 0 25px;
-}
-
-.icon:hover {
-  fill: white
-}
-
-footer {
-  position: absolute;
-  left:0px;
-  bottom:0px;
-  background: yellow;
-  width:100%;
 }
 
 /*HW1-3*/
@@ -471,4 +436,70 @@ p {
   z-index: -1;
 }
 
+/*Hover me*/
 
+.footerIcon {
+  border: #000;
+  position: fixed;
+  bottom: 0;
+  right:45%;
+  width: 200px;
+  transform: translateY(calc(100% - 50px));
+  transition-property: transform;
+  transition-duration: 2.5s;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, rgb(70, 202, 60),rgb(209, 209, 21),rgb(255, 30, 0));
+  border-image-slice: 1;
+}
+
+.footerIcon:hover {
+  transform: translateY(0);
+}
+
+.textHover {
+  text-align: center;
+  padding: 10px 0;
+  background: #6600ff;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, rgb(70, 202, 60),rgb(209, 209, 21),rgb(255, 30, 0));
+  border-image-slice: 1;
+}
+
+
+.romb {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 1px;
+  transform: rotate(45deg);
+}
+
+.romb > li {
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.romb svg {
+  transform: rotate(-45deg);
+}
+
+.romb > li a {
+  background: #ece0ad;
+  text-decoration: none;
+  display: block;
+  color: #2f1541;
+  width: 40px;
+}
+
+.icon {
+width: 40px;
+height: 40px;
+fill: #23083e;
+}
+
+.footerIcon li:hover svg {
+fill: red;
+}
