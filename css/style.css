@@ -463,6 +463,29 @@ p {
   border: 2px solid;
   border-image: linear-gradient(90deg, rgb(70, 202, 60),rgb(209, 209, 21),rgb(255, 30, 0));
   border-image-slice: 1;
+  animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+  0% {
+      transform: translate(3px, 3px) rotate(0deg);
+  }
+
+  10% {
+      transform: translate(-2px, -3px) rotate(-2deg);
+  }
+
+  20% {
+      transform: translate(-5px, 0px) rotate(2deg);
+  }
+
+  50% {
+      transform: translate(-2px, 3px) rotate(-1deg);
+  }
+
+  100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 
