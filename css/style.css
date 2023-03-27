@@ -129,6 +129,9 @@ text-transform: uppercase;
   transition-timing-function: ease-in;
 }
 
+.globalMenu li a.active {
+  color: red;
+}
 /*HW1-3*/
 
 .container1 {
@@ -444,7 +447,7 @@ p {
   bottom: 0;
   right:45%;
   width: 200px;
-  transform: translateY(calc(100% - 50px));
+  transform: translateY(calc(100% - 42px));
   transition-property: transform;
   transition-duration: 2.5s;
   border: 2px solid;
@@ -464,6 +467,10 @@ p {
   border-image: linear-gradient(90deg, rgb(70, 202, 60),rgb(209, 209, 21),rgb(255, 30, 0));
   border-image-slice: 1;
   animation: shake 0.3s infinite;
+}
+
+.footerIcon:hover .textHover {
+  animation: none;
 }
 
 @keyframes shake {
