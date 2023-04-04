@@ -1,9 +1,20 @@
 @import url(/css/reset.css);
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Italic.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+  font-weight: 500;
+}
+
 /* GLOBAL STYLES */
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
   background: #F5F5F5;
   color: #161616;
   font-size: 18px;
@@ -17,7 +28,6 @@ body {
 
 h2 {
   font-family: 'Montserrat', sans-serif;;
-  font-weight: 500;
   text-align: center;
   font-size: 30px;
   line-height: 22px;
@@ -56,6 +66,14 @@ main {
 .ameliaFlex {
   display: flex;
   align-items: center;
+}
+
+.ht-1 {
+  margin: 0 0 40px 0;
+}
+
+.tt {
+  margin-bottom: 60px;
 }
 
 .order {
@@ -100,6 +118,29 @@ main {
 
 .textAbout p {
   width: 550px;
+}
+
+.text-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.text-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 0 0 60px;
+}
+
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.p40 {
+  padding: 40px;
 }
 
 /* PRICE */
@@ -156,12 +197,12 @@ main {
 
 /* Наши Работы*/
 
-.flowersH {
+.ameliaFsH {
     text-align: center;
     margin-top: 120px;
 }
 
-.flowersImages {
+.ameliaFsImages {
     margin-top: 80px;
     display: flex;
     justify-content: center;
@@ -169,12 +210,12 @@ main {
     padding-bottom: 120px;
 }
 
-.flowersImages p {
+.ameliaFsImages p {
     text-align: center;
     margin-top: 23px;
 }
 
-.flowersImages div {
+.ameliaFsImages div {
     background-color: #81a36b;
     width: 350px;
     padding: 15px 15px 93px 15px;
@@ -215,3 +256,361 @@ main {
   text-align: center;
 }
 
+.open {
+  display: flex !important;
+}
+
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 18px;
+}
+
+.burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background: #161616;
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #161616;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  top: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+@media screen and (max-width: 1100px) {
+
+  .burger {
+      display: flex;
+  }
+
+  .info {
+      display: flex;
+      width: 100%;
+  }
+
+
+  .info li {
+      display: none;
+  }
+
+  .ameliaF .container {
+      display: inline-block;
+  }
+
+  .ht-1 {
+      margin-top: 20px;
+
+  }
+
+  .tt {
+      margin-bottom: 20px;
+  }
+
+  .ameliaImg {
+      margin-top: 20px;
+  }
+
+  .ameliaImg img {
+      flex: 1 1 50%;
+      height: 300px;
+      width: 420px;
+      object-fit: cover;
+  }
+
+  .text-1 {
+      font-weight: 500;
+      font-size: 40px;
+  }
+
+  .ameliaF-2 .container {
+      padding: 40px 0;
+  }
+
+  .p40 {
+      padding: 20px;
+  }
+
+  .about {
+      max-width: 400px;
+      margin: 0 auto;
+  }
+
+
+
+  .flowersImages img {
+      flex: 1 1 30%;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+
+  .button-1 {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 0;
+      margin-right: 30px;
+  }
+
+  .button-2 {
+
+      padding: 10px 10px;
+      font-size: 16px;
+      border: 0;
+  }
+
+  .ameliaImg {
+      height: 100%;
+  }
+
+  .ameliaImg_2 {
+      height: 100%;
+      flex: 1 1 50%;
+  }
+
+  .ameliaImg_2 img {
+      height: 300px;
+      width: 100%;
+      object-fit: contain;
+  }
+
+  .text-2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      padding: 0 0 60px;
+  }
+
+
+  .text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+  }
+
+}
+
+@keyframes banim {
+  from {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info {
+      display: flex;
+      position: fixed;
+      width: 100%;
+  }
+
+
+  .info li {
+      display: none;
+  }
+
+  .box .flowersImages {
+      flex-flow: wrap;
+  }
+
+  .box img {
+      flex: 1 1 30%;
+  }
+
+
+  .ameliaF .container {
+      justify-content: center;
+      text-align: center;
+  }
+
+  .button{
+      justify-content: center;
+  }
+
+  .text-center {
+      text-align: center;
+  }
+
+  .textL {
+      text-align: left;
+  }
+
+  .works h1 {
+      font-size: 20px;
+      margin-bottom: 8px;
+  }
+
+  .works h1+p {
+      font-size: 14px;
+      margin-bottom: 18px;
+  }
+
+  .flowersImages {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      padding: 0 0 30px;
+      flex-wrap: wrap;
+  }
+
+  .card {
+      background: #81A36B;
+      font-size: 12px;
+      width: 100%;
+      max-width: 250px;
+      padding: 10px 10px 30px;
+
+  }
+
+  .cardT {
+      padding: 12px;
+  }
+
+  .price-box {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+  }
+
+  .price{
+      padding: 40px 0;
+  }
+
+  .price-box img {
+      height: 50px;
+      margin-bottom: 10px;
+  }
+
+  .price-box p {
+      font-size: 12px;
+  }
+
+
+  .box-2> div + div{
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto;
+  }
+  
+  .box-2 {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+  }
+
+  
+
+
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .info {
+      display: flex;
+      position: fixed;
+      width: 100%;
+  }
+
+
+  .info li {
+      display: none;
+  }
+
+  .ameliaImg {
+      height: 100%;
+      max-width: 250px;
+  }
+
+
+  .ameliaImg img {
+      flex: 1 1 20%;
+  }
+
+  .card-item img {
+      max-width: 50px;
+  }
+
+  .footer .flex-conteiner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+  }
+
+  .footer-logo{
+      order: 1;
+  }
+
+  .footer-contact{
+      order: 2;
+  }
+
+  .footer-social{
+      order: 3;
+  }
+
+  .ameliaImg {
+      display: none;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 375px) {
+  .info {
+      display: flex;
+      position: fixed;
+      width: 100%;
+  }
+
+
+  .info li {
+      display: none;
+  }
+
+
+  .ameliaImg_2 {
+     display: none;
+  }
+
+}

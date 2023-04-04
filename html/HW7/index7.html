@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homework7</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;1,300&family=Roboto&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300;0,500;0,600;1,300&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/html/HW7/style7.css">
 </head>
 <body>
@@ -27,22 +22,23 @@
         <li><a href="#">Контакты</a></li>
       </ul>
     </div>
+    <div class="burger">
+      <span></span>
+    </div>
   </header>
 
   <main>
-    <section>
       <section class="ameliaF">
         <div class="container">
             <div class="ameliaFlex">
                 <div class="ameliaText">
                     <div class="ameliaLogo">
-                        <img src="/images/logo.svg" alt="Amelia Flowers" width="483" height="67">
-                    </div>
-                    <p class="ameliaContent">
-                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
-                        Lorem Ipsum является стандартной "рыбой" для
-                        текстов на латинице с начала XVI века.
-                    </p>
+                      <h1 class="ht-1 text-1">Amelia Flowers</h1>
+                      <div class="tt text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro inventore cumque hic
+                        dolores, odit, molestias optio fugiat
+                        mollitia totam repudiandae ratione similique laudantium facilis, explicabo et commodi
+                        suscipit sequi. Ex?
+                      </div>
                     <button class="order">Заказать букет</button>
                     <button class="help">Помощь флориста</button>
                 </div>
@@ -50,19 +46,19 @@
                     <img src="/images/flower1.jpg" alt="flower" width="540" height="670">
                 </div>
             </div>
-      </button>
-    </section>
-    <section>
-      <div class="about">
-        <h2>О Нас</h2>
-          <div class="textAbout">
-              <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
-                  для текстов на латинице с начала XVI века.
-              </p>
-          </div>
+      </section>
+    
+      <section>
+        <div class="about">
+          <h2 class="p40 text-2">О Нас</h2>
+            <div class="textAbout">
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой"
+                    для текстов на латинице с начала XVI века.
+                </p>
+            </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
     <section class="price">
       <div class="container">
         <ul class="price-box">
@@ -108,27 +104,31 @@
           </div>
       </div>
   </section>
-  <section class="works">
-     <div class="container">
-          <div class="flowersH">
-              <h2>Наши работы</h2>
-          </div>
-          <div class="flowersImages">
-              <div>
+  <div class="works">
+     <div class="container textCenter">
+              <h2 class="text-2">Наши работы</h2>
+          <div class="flowersImages textL">
+              <div class="card-img">
                   <img src="/images/flower3.jpg" alt="flower" width="320" height="402">
-                  <p>Букет "Флоренция"</p>
+                  <div class="cardT">
+                    <p>Букет "Флоренция"</p>
+                  </div>
               </div>
-              <div>
+              <div class="card-img">
                   <img src="/images/flower4.jpg" alt="flower" width="320" height="402">
-                  <p>Букет "Флоренция"</p>
+                  <div class="cardT">
+                    <p>Букет "Флоренция"</p>
+                  </div>
               </div>
-              <div>
+              <div class="card-img">
                   <img src="/images/flower5.jpg" alt="flower" width="320" height="402">
-                  <p>Букет "Флоренция"</p>
+                  <div class="cardT">
+                    <p>Букет "Флоренция"</p>
+                  </div>
               </div>
           </div>
      </div>
-  </section>
+  </div>
   </main>
 
   <footer class="footer">
@@ -136,7 +136,7 @@
       <div class="flex-container">
         <div class="footer-contact">
           <h3>Контакты</h3>
-          <ul>
+          <ul class="block">
             <li><a href="#">+380517328964</a></li>
             <li><a href="#">+380517328964</a></li>
             <li>Харьков, ул Сумская 115</li>
